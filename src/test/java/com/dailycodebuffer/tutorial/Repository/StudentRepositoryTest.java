@@ -124,4 +124,6 @@ class StudentRepositoryTest {
                 "telmangadimov2@gmail.com"
         );
     }
+    
+
 }
