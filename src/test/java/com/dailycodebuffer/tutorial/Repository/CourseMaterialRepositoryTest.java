@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class CourseMaterialRepositoryTest {
@@ -26,5 +28,13 @@ class CourseMaterialRepositoryTest {
                         .course(course)
                         .build();
         repository.save(courseMaterial);
+    }
+
+    @Test
+    public void printAllCoursesMaterials(){
+        List<CourseMaterial> courseMaterials =
+                repository.findAll();
+
+        System.out.println("courseMaterials = " + courseMaterials);
     }
 }
